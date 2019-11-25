@@ -81,7 +81,6 @@ const App = () => {
     setGameBoard(board)
     setNumberOfMines(mines)
   }
-
   // This runs the game automatically on component mount for now
   useEffect(() => {
     createBoard()
@@ -111,5 +110,4 @@ const App = () => {
     )
   }
 }
-
 export default App

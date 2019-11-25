@@ -89,13 +89,13 @@ const CellComponent = props => {
     )
   }
 
-  debugger
-
   // theoretically this should not be reached 🤔
   return (
-    <div className="cell">
-      <h6 className="cell-item"> </h6>
-    </div>
+    <>
+      <div className="cell">
+        <h6 className="cell-item"> </h6>
+      </div>
+    </>
   )
 }
 
