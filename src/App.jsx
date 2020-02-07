@@ -92,13 +92,17 @@ const App = () => {
   if (hasGameId && hasGameBoard) {
     // render the game if its been loaded
     return (
-      <BoardComponent
-        flagCell={flagCell}
-        checkCell={checkCell}
-        board={gameBoard}
-        gameId={gameId}
-        gameState={gameState}
-      />
+      <>
+        <div className="boardContainer">
+          <BoardComponent
+            flagCell={flagCell}
+            checkCell={checkCell}
+            board={gameBoard}
+            gameId={gameId}
+            gameState={gameState}
+          />
+        </div>
+      </>
     ) //{board} here is the state being passed to Board.jsx (child component). Purple can have any name. Grey board is called up above.
   } else {
     // render "alternative" screen until the game has been loaded
