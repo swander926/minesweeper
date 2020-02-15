@@ -49,16 +49,17 @@ body {
   background-color: #c9c9c9;
   vertical-align: middle;
   text-align: center;
-  line-height: 19px;
+  line-height: 0;
+  /* line-height: 19px; */
   font-weight: bold;
 }
 
 .missed-bomb {
-  background-color: yellow;
+  background-color: rgb(255, 193, 182);
 }
 
 .flagged-bomb {
-  background-color: green;
+  background-color: rgb(244, 255, 246);
 }
 
 .unrevealed {
@@ -71,14 +72,28 @@ body {
 }
 
 .flagged {
-  background-color: darkslategray;
+  /* background-color: darkslategray; */
 }
 
 .incorrectly-flagged {
-  background-color: purple;
+  background-color: rgb(65, 104, 67);
 }
 
 .cell-item {
   /* font-size: 20px; */
   font-weight: 800;
+}
+
+.cell-item-flag {
+  vertical-align: middle;
+  justify-content: center;
+  margin-top: 10px;
+  font-size: 11px;
+  height: 100%;
+}
+
+img {
+  padding: 0;
+  margin: 0;
+  margin-top: -10px;
 }

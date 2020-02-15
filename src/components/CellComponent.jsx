@@ -54,7 +54,7 @@ const CellComponent = props => {
       return (
         <button className="cell incorrectly-flagged">
           <h6 className="cell-item">
-            <img height="50px" width="50px" src="https://cdn2.iconfinder.com/data/icons/occean-and-sea-life-2/48/104-512.png" />
+            <img height="12px" width="12px" src="https://cdn2.iconfinder.com/data/icons/occean-and-sea-life-2/48/104-512.png" />
           </h6>
         </button>
       )
@@ -86,7 +86,7 @@ const CellComponent = props => {
   if (cell === 'F') {
     return (
       <button className="cell flagged">
-        <h6 className="cell-item">🚩</h6>
+        <h6 className="cell-item-flag">🚩</h6>
       </button>
     )
   }
