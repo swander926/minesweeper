@@ -20,15 +20,18 @@ const App = () => {
   // console.log(myHookResult[1]) // the "state updater function"; you can also name this anything lol
 
   const checkCell = async (cellRow, cellColumn) => {
+
     const response = await Axios.post(
       `https://minesweeper-api.herokuapp.com/games/${gameId}/check`,
       { row: cellRow, col: cellColumn }
-    )
-
-    const { data } = response
-    const { id, board, state } = data // this "board" is the board data returned from the api
-
+      )
+      const { data } = response
+      const { id, board, numberOfMines, state } = data // this "board" is the board data returned from the api
+      
+      
+      console.log({data})
     setGameBoard(board)
+    setNumberOfMines(numberOfMines)
     setGameState(state)
   }
 
@@ -39,10 +42,12 @@ const App = () => {
     )
 
     const { data } = response
-    const { id, board, state } = data // this "board" is the board data returned from the api
+    const { id, board, numberOfMines, state } = data // this "board" is the board data returned from the api
 
     setGameBoard(board)
+    setNumberOfMines(numberOfMines)
     setGameState(state)
+    console.log({data})
   }
 
   const createBoard = async () => {
